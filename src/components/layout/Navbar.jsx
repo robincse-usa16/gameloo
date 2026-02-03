@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../../styles/navbar.css";
 import logo from "../../assets/image/final1.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -9,13 +10,23 @@ const Navbar = () => {
     <>
       <header className="navbar">
         <div className="nav-left">
-          <img src={logo} alt="Gamezaa Logo" className="logo" />
+          <Link to="/">
+            <img src={logo} alt="Gamezaa Logo" className="logo" />
+          </Link>
         </div>
         <ul className="nav-menu">
-          <li>Game</li>
-          <li>Card</li>
-          <li>Direct Top-Up</li>
-          <li>Mobile Recharge</li>
+          <Link to="/NewGames">
+            <li>Game</li>
+          </Link>
+          <Link to="/card">
+            <li>Card</li>
+          </Link>
+          <Link to={"/Direct Top-Up"}>
+            <li>Direct Top-Up</li>
+          </Link>
+          <Link to={"/Mobile Recharge"}>
+            <li>Mobile Recharge</li>
+          </Link>
         </ul>
 
         <div className="nav-right">
