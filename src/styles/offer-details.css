@@ -1,0 +1,213 @@
+/* =================================================
+   OFFER HEADER
+   ================================================= */
+
+.offer-header {
+  background-image: url("../assets/image/black10.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  padding: 48px 0;
+  margin-bottom: 37px; /* 🔥 REAL GAP after header */
+}
+
+.offer-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    var(--banner-color, #555),
+    rgba(0, 0, 0, 0.85)
+  );
+}
+
+.offer-header-inner {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  z-index: 2;
+}
+
+.offer-header-image {
+  width: 220px;
+  height: 220px;
+  border-radius: 32px;
+  object-fit: cover;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.offer-header-info h1 {
+  font-size: 30px;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.offer-header-info p,
+.offer-header-info small {
+  color: #ddd;
+}
+
+.favorite-btn {
+  margin-left: auto;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* =================================================
+   PAGE BODY (MAIN CONTENT)
+   ================================================= */
+
+.offer-body {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px 100px;
+
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  gap: 40px;
+}
+
+/* =================================================
+   LEFT SIDE — SELECT TOP-UP / CARD
+   ================================================= */
+
+.topup-box {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 36px;
+}
+
+/* title spacing */
+.topup-box h3 {
+  margin-bottom: 24px;
+}
+
+/* card grid */
+.topup-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* top-up / card item */
+.diamond-card {
+  background: linear-gradient(145deg, #3b2b70, #1a123d);
+  border-radius: 18px;
+  padding: 22px;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.diamond-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.diamond-card.active {
+  outline: 3px solid #ffd700;
+}
+
+.diamond-glow {
+  font-size: 42px;
+  animation: sparkle 1.5s infinite alternate;
+}
+
+@keyframes sparkle {
+  from {
+    filter: drop-shadow(0 0 5px #00eaff);
+  }
+  to {
+    filter: drop-shadow(0 0 20px #00eaff);
+  }
+}
+
+.price {
+  margin-top: 12px;
+  font-weight: 700;
+}
+
+/* =================================================
+   RIGHT SIDE — ORDER SUMMARY
+   ================================================= */
+
+.order-box.premium {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 32px;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* order title */
+.order-box.premium h3 {
+  margin-bottom: 16px;
+}
+
+/* input */
+.order-box input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 24px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+/* total line */
+.summary-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+/* buttons */
+.buy-btn {
+  width: 100%;
+  background: #ff4d00;
+  color: #fff;
+  padding: 16px;
+  border-radius: 14px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.paypal-btn {
+  width: 100%;
+  margin-top: 14px;
+  background: #1e6fd9;
+  color: #fff;
+  padding: 16px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+/* =================================================
+   RESPONSIVE
+   ================================================= */
+
+@media (max-width: 1024px) {
+  .offer-body {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}

@@ -1,0 +1,226 @@
+/* ======================================================
+   COMMON WRAPPER
+====================================================== */
+
+.topup-wrapper {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 32px;
+}
+
+.topup-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+/* GRID */
+.topup-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+/* ======================================================
+   TOP-UP CARD (UNCHANGED PREMIUM)
+====================================================== */
+
+.topup-card {
+  position: relative;
+  background: linear-gradient(180deg, #4b1f7a, #2a0f4a);
+  border-radius: 18px;
+  padding: 22px 18px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  color: #fff;
+}
+
+.topup-card:hover {
+  transform: translateY(-6px);
+}
+
+.topup-card.active {
+  outline: 3px solid #ffd54a;
+}
+
+/* DISCOUNT / BONUS BADGE */
+.bonus-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: linear-gradient(135deg, #ff3d00, #ff9100);
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+/* COIN */
+.coin-box {
+  margin: 22px 0 14px;
+}
+
+.coin-image {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+/* AMOUNT */
+.diamond-amount {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.bonus-inline {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.coin-name {
+  display: block;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+/* PRICE */
+.price-box {
+  background: #ffc107;
+  color: #000;
+  font-weight: 800;
+  padding: 12px 0;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+/* ======================================================
+   CARD OPTION — NEW UNIQUE PREMIUM DESIGN
+====================================================== */
+
+.card-option {
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.9),
+    rgba(245, 246, 248, 1)
+  );
+  border-radius: 20px;
+  padding: 26px 20px 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.28s ease;
+  border: 1px solid #e6e8ec;
+  overflow: hidden;
+}
+
+/* subtle glass highlight */
+.card-option::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.35),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.card-option:hover::before {
+  opacity: 1;
+}
+
+.card-option:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.14);
+}
+
+.card-option.active {
+  outline: 3px solid #4f46e5;
+}
+
+/* DISCOUNT RIBBON — SUBTLE & PREMIUM */
+.card-discount-ribbon {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 999px;
+  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.4);
+}
+
+/* CARD IMAGE */
+.card-product-image {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  object-fit: cover;
+  margin-bottom: 14px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+/* CARD VALUE (MAIN FOCUS) */
+.card-value {
+  font-size: 24px;
+  font-weight: 900;
+  margin-bottom: 4px;
+  color: #111827;
+}
+
+.card-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  opacity: 0.65;
+}
+
+/* PRICE LINE */
+.card-price {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-old-price {
+  font-size: 13px;
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.card-new-price {
+  font-size: 16px;
+  font-weight: 800;
+  color: #111827;
+}
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+@media (max-width: 1024px) {
+  .topup-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .topup-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .topup-grid {
+    grid-template-columns: 1fr;
+  }
+}

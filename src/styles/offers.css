@@ -1,0 +1,80 @@
+/* ========== SCREENSHOT MATCH OFFER CARD ========== */
+
+.ss-offer-card {
+  position: relative;
+  background: #ededed;
+  border-radius: 16px;
+  padding: 14px;
+  overflow: hidden;
+}
+
+/* diagonal soft overlay */
+.ss-offer-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(0, 0, 0, 0.15)
+  );
+  pointer-events: none;
+}
+
+.ss-offer-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+/* IMAGE */
+.ss-offer-img {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  object-fit: cover;
+  background: #000;
+}
+
+/* TEXT */
+.ss-offer-text h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 2px;
+}
+
+.ss-offer-text p {
+  font-size: 12px;
+  color: #777;
+}
+
+/* BOTTOM */
+.ss-offer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+/* PROMO */
+.ss-promo {
+  background: #373b36;
+  color: #fff;
+  font-size: 11px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+/* DISCOUNT */
+.ss-discount {
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+}
+/* 🔥 DISCOUNT BADGE */

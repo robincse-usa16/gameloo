@@ -1,0 +1,67 @@
+/* ===== PAGE CONTAINER ===== */
+.home-page-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* ===== TWO COLUMN ROW ===== */
+.home-section-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  margin-bottom: 56px;
+}
+
+/* ===== SECTION BOX ===== */
+.home-section-box {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 32px;
+  border: 1px solid #f0f0f0;
+}
+
+/* ===== SECTION HEADER ===== */
+.home-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.home-section-header h3 {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.view-more {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ff4d00;
+  cursor: pointer;
+}
+
+/* ===== CARD GRID ===== */
+.home-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .home-section-row {
+    grid-template-columns: 1fr;
+  }
+
+  .home-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .home-card-grid {
+    grid-template-columns: 1fr;
+  }
+}

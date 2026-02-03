@@ -1,0 +1,176 @@
+/* =========================
+   DESKTOP NAVBAR
+========================= */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 18px 32px;
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Logo */
+.logo {
+  height: 70px;
+  width: auto;
+  transform: scale(1.25);
+  transform-origin: left center;
+}
+
+/* Desktop menu */
+.nav-menu {
+  display: flex;
+  gap: 26px;
+  list-style: none;
+}
+
+.nav-menu li {
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+  color: #333;
+}
+
+.nav-menu li:hover {
+  color: #000;
+}
+
+/* Right section */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-right input {
+  padding: 7px 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+}
+
+.nav-right button {
+  padding: 7px 16px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.nav-right button:hover {
+  background: #f5f5f5;
+}
+
+/* Hamburger (hidden on desktop) */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* =========================
+   MOBILE SLIDE MENU
+========================= */
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 280px;
+  height: 100vh;
+  background: #ffffff;
+  z-index: 200;
+  padding: 22px;
+  transition: left 0.35s ease;
+}
+
+.mobile-menu.show {
+  left: 0;
+}
+
+/* Mobile menu header */
+.mobile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.mobile-header img {
+  height: 40px;
+}
+
+.mobile-header span {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Mobile menu items */
+.mobile-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.mobile-menu li {
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #333;
+}
+
+.mobile-menu li:hover {
+  color: #000;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 150;
+}
+
+/* =========================
+   RESPONSIVE (MOBILE)
+========================= */
+
+@media (max-width: 768px) {
+  /* Hide desktop items */
+  .nav-menu,
+  .nav-right {
+    display: none;
+  }
+
+  /* Navbar alignment */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Toggle LEFT */
+  .hamburger {
+    display: block;
+    order: 1;
+  }
+
+  /* Logo RIGHT */
+  .nav-left {
+    order: 2;
+    margin-left: auto;
+  }
+
+  /* Logo size on mobile */
+  .logo {
+    height: 50px;
+    transform: scale(1.15);
+  }
+}

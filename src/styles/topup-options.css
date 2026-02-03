@@ -1,0 +1,177 @@
+.topup-wrapper {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 28px;
+}
+
+.topup-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+/* 4 cards per row */
+.topup-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+/* CARD */
+.topup-card {
+  position: relative;
+  background: linear-gradient(180deg, #4b1f7a, #2a0f4a);
+  border-radius: 16px;
+  padding: 22px 18px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  color: #fff;
+}
+
+.topup-card:hover {
+  transform: translateY(-6px);
+}
+
+/* ACTIVE */
+.topup-card.active {
+  outline: 3px solid #ffd54a;
+}
+
+/* BONUS TAG */
+.bonus-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ff3d00;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+/* DIAMOND ICON */
+.diamond-box {
+  margin: 26px 0 12px;
+}
+
+.diamond-icon {
+  font-size: 36px;
+  display: inline-block;
+  animation: sparkle 1.4s infinite ease-in-out;
+}
+
+/* COIN IMAGE BOX */
+.coin-box {
+  margin: 22px 0 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.coin-image {
+  width: 42px;
+  height: 42px;
+
+  animation: coinFloat 2.6s ease-in-out infinite;
+  filter: drop-shadow(0 0 10px rgba(0, 229, 255, 0.7));
+}
+
+/* FLOATING ANIMATION */
+@keyframes coinFloat {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-6px) scale(1.1);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* HOVER PUNCH */
+.topup-card:hover .coin-image {
+  transform: scale(1.2);
+}
+
+/* 💎 Animation */
+/* @keyframes sparkle {
+  0% {
+    transform: scale(1) rotate(0deg);
+    filter: drop-shadow(0 0 0px #00e5ff);
+  }
+  50% {
+    transform: scale(1.2) rotate(8deg);
+    filter: drop-shadow(0 0 10px #00e5ff);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    filter: drop-shadow(0 0 0px #00e5ff);
+  }
+} */
+
+/* AMOUNT */
+.diamond-amount {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.coin-name {
+  display: block;
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+/* PRICE BUTTON */
+.price-box {
+  background: #ffc107;
+  color: #000;
+  font-weight: 800;
+  padding: 12px 0;
+  border-radius: 10px;
+  font-size: 15px;
+}
+.offer-details-section {
+  background: #f6f7f8;
+  padding: 40px 0 80px;
+}
+
+.offer-details-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  display: grid;
+  grid-template-columns: 2.4fr 1fr; /* LEFT বড়, RIGHT ছোট */
+  gap: 32px;
+}
+/* PRICE STYLES */
+.old-price {
+  font-size: 13px;
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.new-price {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.save-text {
+  font-size: 12px;
+  margin-top: 6px;
+  color: #00e676;
+  font-weight: 600;
+}
+
+/* CARD DIFFERENT LOOK */
+.card-style {
+  background: linear-gradient(180deg, #1c1c1c, #0f0f0f);
+}
+
+.card-image {
+  width: 42px;
+  height: 42px;
+}

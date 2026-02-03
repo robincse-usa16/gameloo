@@ -1,0 +1,150 @@
+/* =========================
+   WRAPPER (STICKY)
+   ========================= */
+.order-summary-wrapper {
+  position: sticky;
+  top: 135px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* =========================
+   BASE CARD
+   ========================= */
+.order-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 24px 26px;
+  border: 1px solid #eee;
+}
+
+/* =========================
+   QUANTITY CARD
+   ========================= */
+.quantity-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 80px;
+}
+
+.quantity-label {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+}
+
+.quantity-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 150px;
+  height: 46px;
+
+  padding: 0 12px;
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.quantity-box button {
+  width: 34px;
+  height: 34px;
+  border: none;
+  background: #f3f4f6;
+  border-radius: 8px;
+
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.quantity-box span {
+  font-size: 15px;
+  font-weight: 600;
+  color: #000;
+}
+
+/* =========================
+   ORDER INFO (TOP-UP)
+   ========================= */
+.order-info-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.order-info-card input {
+  width: 100%;
+  padding: 15px 16px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+/* =========================
+   TOTAL CARD
+   ========================= */
+.total-card {
+  padding: 32px 26px;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 26px;
+}
+
+.total-label {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.total-price {
+  font-size: 24px;
+  font-weight: 800;
+  color: #ff3d00;
+}
+
+/* =========================
+   BUTTONS
+   ========================= */
+.buy-now-btn {
+  width: 100%;
+  background: #ff4d00;
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  padding: 18px 0;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.paypal-btn {
+  width: 100%;
+  background: #0070ba;
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  padding: 16px 0;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+/* =========================
+   SAVE
+   ========================= */
+.save-checkbox {
+  font-size: 13px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

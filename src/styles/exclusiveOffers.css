@@ -1,0 +1,177 @@
+/* ================= SECTION ================= */
+
+.exclusive-section {
+  padding: 64px 0;
+  background: #f5f6f6;
+  overflow: hidden;
+}
+
+/* Wider container */
+.exclusive-container {
+  max-width: 1440px; /* 🔼 wider */
+  margin: 0 auto;
+  padding: 0 12px; /* 🔽 less side gap */
+}
+
+/* ================= HEADER ================= */
+
+.exclusive-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.exclusive-header h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.exclusive-header p {
+  font-size: 14px;
+  color: #666;
+}
+
+.see-more-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 9px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ================= GRID ================= */
+
+.exclusive-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px; /* 🔼 a bit more breathing */
+}
+
+/* ================= CARD ================= */
+
+.offer-card {
+  background: transparent;
+  cursor: pointer;
+}
+
+/* TOP PART */
+.offer-top {
+  position: relative;
+  border-radius: 18px;
+  padding: 12px 12px 10px 17px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(172, 158, 158, 0.25),
+      rgba(161, 146, 146, 0.45)
+    ),
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--offer-bg-color, #6f7378) 70%, #000 30%),
+      color-mix(in srgb, var(--offer-bg-color, #6f7378) 40%, #000 60%)
+    );
+}
+.offer-top::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../assets/image/back.jpg");
+  background-size: cover;
+  opacity: 0.2;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* IMAGE — bigger & higher */
+.offer-image {
+  width: 60px; /* 🔼 bigger */
+  height: 60px;
+  border-radius: 16px;
+  object-fit: cover;
+  margin-top: -40px; /* 🔼 more overlap */
+  flex-shrink: 0;
+}
+
+/* TEXT */
+.offer-text h4 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.offer-text p {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ================= BOTTOM STRIP ================= */
+
+.offer-bottom {
+  background: #ffffff;
+  border-radius: 0px;
+  margin-top: -9px;
+  padding: 14px 18px; /* 🔼 bigger area */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+/* PROMO */
+.promo-badge {
+  background: #1f9d00;
+  color: #fff;
+  font-size: 13px;
+  padding: 6px 18px; /* 🔼 bigger */
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+/* DISCOUNT */
+/* ================= DISCOUNT (RIGHT SIDE) ================= */
+
+.discount-badge {
+  /* background: linear-gradient(135deg, #ff3d00, #ff9100); */
+
+  font-size: 10px;
+  font-weight: 400;
+
+  padding: 6px 14px;
+
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); */
+  white-space: nowrap;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1280px) {
+  .exclusive-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .exclusive-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .exclusive-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .exclusive-grid {
+    grid-template-columns: 1fr;
+  }
+}
